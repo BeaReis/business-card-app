@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BusinessCard</string>
     <string name="adicionar_cartao">Adicionar Cartão</string>
+    <string name="filtrar">Filtrar</string>
 </resources>
