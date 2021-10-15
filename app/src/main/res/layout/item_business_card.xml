@@ -32,31 +32,26 @@
                 android:id="@+id/tv_nome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Beatriz Pontes da Costa Reis"
-                android:textSize="16sp"
-                android:textStyle="bold"
+                android:text="@string/txt_nome"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/BoldStyle" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_cargo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Profissão"
-                android:textSize="14sp"
-                android:textStyle="bold"
+                android:text="@string/txt_profissao"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_nome" />
+                app:layout_constraintTop_toBottomOf="@id/tv_nome"
+                style="@style/RegularStyle"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_telefone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Telefone"
-                android:textSize="14sp"
-                android:textStyle="bold"
+                style="@style/RegularStyle"
+                android:text="@string/txt_telefone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_cargo" />
 
@@ -64,10 +59,8 @@
                 android:id="@+id/tv_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Email"
-                android:textSize="14sp"
-                android:textStyle="bold"
+                android:text="@string/txt_email"
+                style="@style/RegularStyle"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_telefone" />
 
@@ -76,9 +69,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Nome da Empresa"
-                android:textSize="16sp"
-                android:textStyle="bold"
+                android:text="@string/txt_empresa"
+                style="@style/BoldStyle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 

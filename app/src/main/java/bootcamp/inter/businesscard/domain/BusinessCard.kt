@@ -12,7 +12,6 @@ mapeável em seu banco de dados. A persistência dos dados será feita no armaze
 data class BusinessCard (
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val nome: String,
-    val cargo: String,
     val email: String,
     val telefone: String,
     val empresa: String,

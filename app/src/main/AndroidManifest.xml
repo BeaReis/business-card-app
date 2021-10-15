@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BusinessCard">
         <activity
-            android:name=".ui.AddBusinessCardActivity"
+            android:name=".presenter.AddBusinessCardActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".presenter.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package bootcamp.inter.businesscard
+package bootcamp.inter.businesscard.presenter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

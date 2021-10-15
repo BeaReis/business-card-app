@@ -8,4 +8,9 @@
     <string name="verde">Verde</string>
     <string name="vermelho">Vermelho</string>
     <string name="salvar">Salvar</string>
+    <string name="txt_nome">Beatriz Pontes da Costa Reis</string>
+    <string name="txt_profissao">Profissão</string>
+    <string name="txt_telefone">Telefone</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_empresa">Nome da Empresa</string>
 </resources>
