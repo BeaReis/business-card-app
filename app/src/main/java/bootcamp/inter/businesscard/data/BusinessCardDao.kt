@@ -2,7 +2,7 @@ package bootcamp.inter.businesscard.data
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import bootcamp.inter.businesscard.domain.BusinessCard
+import bootcamp.inter.businesscard.model.BusinessCard
 
 /*
     Essa inteface oferece métodos abstratos de acesso ao banco de dados do app através
@@ -23,11 +23,11 @@ interface BusinessCardDao {
 
     //@Update modifica no banco de dados um conjunto de entidades fornecidas como parâmetros.
     @Update
-    suspend fun update (vararg businessCard: BusinessCard)
+    fun update (businessCard: BusinessCard)
 
     //@Delete remove do banco de dados um conjunto de entidades fornecidas como parâmetros.
     @Delete
-    suspend fun delete (vararg businessCard: BusinessCard)
+    fun delete (businessCard: BusinessCard)
 
 
 }

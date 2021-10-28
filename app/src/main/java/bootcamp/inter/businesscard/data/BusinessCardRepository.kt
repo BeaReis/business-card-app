@@ -1,7 +1,10 @@
 package bootcamp.inter.businesscard.data
 
 import androidx.lifecycle.LiveData
-import bootcamp.inter.businesscard.domain.BusinessCard
+import bootcamp.inter.businesscard.model.BusinessCard
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 /*
     Essa classe é um repositório que faz o acesso à database por meio da interface Dao.
@@ -10,28 +13,25 @@ import bootcamp.inter.businesscard.domain.BusinessCard
 class BusinessCardRepository(private val dao: BusinessCardDao) {
 
     /*
+    TODO -> Implementar LiveData
         Usar o LiveData com o Room possibilita que os dados exibidos na UI estejam sincronizados
         com os dados armazenados no banco de dados. O LiveData é uma data holder class que pode ser
         observada dentro de uma lifecycle.
-     */
+    */
 
-    val listBusinessCard: LiveData<List<BusinessCard>>
-        get() = dao.getAll()
-
-    /*
-    Aqui foram criadas funções suspensas para trabalhar os métodos da interface Dao através de
-    corrotinas.
-     */
-
-    suspend fun insert(businessCard: BusinessCard){
-        dao.insert(businessCard)
+    fun insert(businessCard: BusinessCard) = runBlocking {
+        launch(Dispatchers.IO) {
+            dao.insert(businessCard)
+        }
     }
 
-    suspend fun update(businessCard: BusinessCard) {
+    fun getAll() = dao.getAll()
+
+    fun update(businessCard: BusinessCard) {
         dao.update(businessCard)
     }
 
-    suspend fun delete(businessCard: BusinessCard) {
+    fun delete(businessCard: BusinessCard) {
         dao.delete(businessCard)
     }
 

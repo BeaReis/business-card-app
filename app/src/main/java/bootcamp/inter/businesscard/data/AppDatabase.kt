@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import bootcamp.inter.businesscard.domain.BusinessCard
+import bootcamp.inter.businesscard.model.BusinessCard
 
 /*
     Essa classe gerencia o banco de dados.

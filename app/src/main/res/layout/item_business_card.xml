@@ -7,7 +7,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/mcv_content"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
         android:checkable="true"
@@ -15,13 +15,14 @@
         android:focusable="true"
         app:cardCornerRadius="10dp"
         app:cardElevation="8dp"
-        app:strokeColor="@color/black"
-        app:strokeWidth="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="16:6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -30,50 +31,50 @@
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_nome"
+                style="@style/BoldStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_nome"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                style="@style/BoldStyle" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_cargo"
+                style="@style/RegularStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_profissao"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_nome"
-                style="@style/RegularStyle"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_nome" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_telefone"
+                style="@style/RegularStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/RegularStyle"
                 android:text="@string/txt_telefone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_cargo" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_email"
+                style="@style/RegularStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/txt_email"
-                style="@style/RegularStyle"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_telefone" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_nome_empresa"
+                style="@style/BoldStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/txt_empresa"
-                style="@style/BoldStyle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
-
+            <!--
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/iv_logo"
                 android:layout_width="0dp"
@@ -83,9 +84,48 @@
                 app:layout_constraintBottom_toTopOf="@+id/tv_nome_empresa"
                 app:layout_constraintTop_toTopOf="@id/tv_nome"
                 android:src="@drawable/ic_example"/>
+            -->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btn_compartilhar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/mcv_content"
+        app:layout_constraintStart_toStartOf="@+id/mcv_content"
+        android:text="@string/compartilhar"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <Button
+        android:id="@+id/btn_editar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/mcv_content"
+        app:layout_constraintStart_toEndOf="@+id/btn_compartilhar"
+        app:layout_constraintEnd_toStartOf="@+id/btn_deletar"
+        android:layout_marginHorizontal="8dp"
+        android:text="@string/editar"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <Button
+        android:id="@+id/btn_deletar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/mcv_content"
+        app:layout_constraintEnd_toEndOf="@+id/mcv_content"
+        android:text="@string/deletar"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

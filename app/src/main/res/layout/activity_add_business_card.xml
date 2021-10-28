@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presenter.AddBusinessCardActivity">
+    tools:context=".view.AddBusinessCardActivity">
 
     <ImageButton
         android:id="@+id/ib_cancel"
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:backgroundTint="@color/white"
+        android:minHeight="48dp"
         android:src="@drawable/ic_cancel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Novo Cartão"
+        android:text="@string/novo_cartao"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,14 +37,15 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="12dp"
-        android:hint="Nome"
+        android:hint="@string/nome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_newcard">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:inputType="textPersonName"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -53,14 +56,15 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="12dp"
-        android:hint="Email"
+        android:hint="@string/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ti_nome">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:inputType="textWebEmailAddress"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -71,14 +75,15 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="12dp"
-        android:hint="Telefone"
+        android:hint="@string/telefone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ti_email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:inputType="phone"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,105 +94,43 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="12dp"
-        android:hint="Nome da Empresa"
+        android:hint="@string/nome_da_empresa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ti_telefone">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:inputType="text"/>
 
     </com.google.android.material.textfield.TextInputLayout>
-
+    <!--
     <TextView
         android:id="@+id/tv_color_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Cor do Cartão"
+        android:text="@string/cor_do_cartao"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ti_empresa" />
+        -->
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/mb_color_white"
-        android:backgroundTint="@color/white"
-        android:text="@string/branco"
-        app:layout_constraintStart_toStartOf="@id/ti_empresa"
-        app:layout_constraintTop_toBottomOf="@+id/tv_color_card"
-        app:strokeColor="@color/black"
-        app:strokeWidth="1dp"
-        style="@style/colorStyle"/>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/mb_color_yellow"
-        android:layout_marginHorizontal="6dp"
-        android:backgroundTint="#FFEB3B"
-        android:text="@string/amarelo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_color_card"
-        app:strokeColor="@color/black"
-        app:strokeWidth="1dp"
-        style="@style/colorStyle"/>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/mb_color_lilac"
-        android:backgroundTint="#C3A2FF"
-        android:text="Lilás"
-        app:layout_constraintEnd_toEndOf="@id/ti_empresa"
-        app:layout_constraintTop_toBottomOf="@+id/tv_color_card"
-        app:strokeColor="@color/black"
-        app:strokeWidth="1dp"
-        style="@style/colorStyle"/>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/mb_color_blue"
-        android:layout_marginTop="6dp"
-        android:backgroundTint="#6EEFFF"
-        android:text="@string/azul"
-        app:layout_constraintStart_toStartOf="@id/mb_color_white"
-        app:layout_constraintTop_toBottomOf="@+id/mb_color_white"
-        app:strokeColor="@color/black"
-        app:strokeWidth="1dp"
-        style="@style/colorStyle"/>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/mb_color_red"
-        android:layout_marginTop="6dp"
-        android:backgroundTint="#FFAAC7"
-        android:text="@string/vermelho"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mb_color_yellow"
-        app:strokeColor="@color/black"
-        app:strokeWidth="1dp"
-        style="@style/colorStyle"/>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/mb_color_green"
-        android:layout_marginTop="6dp"
-        android:backgroundTint="#A7FFAA"
-        android:text="@string/verde"
-        app:layout_constraintEnd_toEndOf="@id/mb_color_lilac"
-        app:layout_constraintTop_toBottomOf="@+id/mb_color_lilac"
-        app:strokeColor="@color/black"
-        app:strokeWidth="1dp"
-        style="@style/colorStyle"/>
-
-    <com.google.android.material.button.MaterialButton
+      <com.google.android.material.button.MaterialButton
         android:id="@+id/mb_salvar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:backgroundTint="@color/black"
+        android:paddingVertical="12dp"
         android:text="@string/salvar"
         android:textSize="18sp"
-        android:paddingVertical="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mb_color_red" />
+
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

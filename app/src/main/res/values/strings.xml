@@ -13,4 +13,20 @@
     <string name="txt_telefone">Telefone</string>
     <string name="txt_email">Email</string>
     <string name="txt_empresa">Nome da Empresa</string>
+    <string name="cor_do_cartao">Cor do Cartão</string>
+    <string name="lilas">Lilás</string>
+    <string name="nome">Nome</string>
+    <string name="email">Email</string>
+    <string name="telefone">Telefone</string>
+    <string name="nome_da_empresa">Nome da Empresa</string>
+    <string name="novo_cartao">Novo Cartão</string>
+    <string name="cartoes_de_visita">Cartões de Visita</string>
+    <string name="filtro">Filtro</string>
+    <string name="label_show_success">Cartão criado com sucesso!</string>
+    <string name="label_share_to">Compartilhar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="editar">editar</string>
+    <string name="compartilhar">compartilhar</string>
+    <string name="deletar">deletar</string>
 </resources>
